@@ -1,0 +1,59 @@
+.stage {
+    perspective: 400px;
+}
+.cube {
+    height : 100px;
+    width : 100px;
+    position : relative;
+    margin : 0 auto;
+    transform-style: preserve-3d;
+}
+.cube div {
+    height : 100px;
+    width : 100px;
+    position : absolute;
+}
+.side_bottom {
+    bottom: -50px;
+    left: 0;
+    background-color: red;
+    opacity: 0.7;
+    transform: rotatex(90deg);
+}
+.side_top {
+    top: -50px;
+    left: 0;
+    background-color: purple;
+    opacity: 0.7;
+    transform: rotatex(90deg);
+}
+.side_back {
+    top: 0;
+    left: 0;
+    background-color: yellow;
+    opacity: 0.7;
+    transform: translatez(-50px);
+}
+.side_right {
+    right: -50px;
+    background-color: green;
+    opacity: 0.7;
+    transform: rotatey(90deg);
+}
+.side_left {
+    left: -50px;
+    background-color: blue;
+    opacity: 0.7;
+    transform: rotatey(90deg);
+}
+.side_front {
+    top: 0;
+    left: 0;
+    background-color: pink;
+    opacity: 0.7;
+    transform: translatez(50px);
+}
+.stage:hover > .cube {
+    transform : rotatey(360deg);
+    transition: all 1s;
+}
